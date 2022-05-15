@@ -20,7 +20,8 @@ Add plugin to the list of TPM plugins in `.tmux.conf` and select desired theme
 
 ```bash
 set -g @plugin 'hasundue/tmux-gruvbox-material'
-set -g @tmux-gruvbox-material 'dark' # or 'light'
+set -g @gruvbox-material_theme 'dark' # or 'light'
+set -g @gruvbox-material_contrast 'medium' # or 'soft' or 'hard'
 ```
 
 Hit `prefix + I` to fetch the plugin and source it. Your Tmux should be updated with the theme at this point.
