@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-THEME_OPTION="@tmux-gruvbox"
+THEME_OPTION="@tmux-gruvbox-material"
 DEFAULT_THEME="dark"
 
 get_theme() {
@@ -19,7 +19,7 @@ get_theme() {
 main() {
 	local theme
   theme=$(get_theme "$THEME_OPTION" "$DEFAULT_THEME")
-	tmux source-file "$CURRENT_DIR/tmux-gruvbox-material-${theme}.conf"
+	tmux source-file "$CURRENT_DIR/${theme}-medium.conf"
 }
 
 main
