@@ -7,23 +7,23 @@ CONTRAST_OPTION="@gruvbox-material_contrast"
 DEFAULT_CONTRAST="medium"
 
 get_option() {
-	local option="$1"
-	local default_value="$2"
-	local option_value
+  local option="$1"
+  local default_value="$2"
+  local option_value
   option_value=$(tmux show-option -gqv "$option")
-	if [ -z "$option_value" ]; then
-		echo "$default_value"
-	else
-		echo "$option_value"
-	fi
+  if [ -z "$option_value" ]; then
+    echo "$default_value"
+  else
+    echo "$option_value"
+  fi
 }
 
 main() {
-	local theme
+  local theme
   theme=$(get_option "$THEME_OPTION" "$DEFAULT_THEME")
-	local contrast
+  local contrast
   contrast=$(get_option "$CONTRAST_OPTION" "$DEFAULT_CONTRAST")
-	tmux source-file "$CURRENT_DIR/${theme}-${contrast}.conf"
+  tmux source-file "$CURRENT_DIR/${theme}-${contrast}.conf"
 }
 
 main
