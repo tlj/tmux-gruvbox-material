@@ -11,7 +11,7 @@ The simplest way is just:
 > HINT: Always make a backup of your config files before any action.
 
 ```bash
-cat tmux-gruvbox-dark.conf >> ~/.tmux.conf
+cat dark-medium.conf >> ~/.tmux.conf
 ```
 
 ### Install through [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
